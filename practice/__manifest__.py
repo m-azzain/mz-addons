@@ -11,11 +11,11 @@ Practicing
 Just for Practicin
 """,
     'category': 'Website/Website',
-    'images' : ['images/accounts.jpeg','images/bank_statement.jpeg','images/cash_register.jpeg','images/chart_of_accounts.jpeg','images/customer_invoice.jpeg','images/journal_entries.jpeg'],
     'depends' : ['website'],
     'data': [
         'views/practice_templates.xml',
     ],
+    'icon': 'practice/static/description/practice.png',
     'demo': [
     ],
     'installable': True,
