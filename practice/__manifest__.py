@@ -27,6 +27,7 @@ Just for Practicin
         ],
         'web.assets_frontend': [
             # Here is own work
+            'practice/static/src/scss/navbar.scss'
         ],
         'web.assets_tests': [
 
