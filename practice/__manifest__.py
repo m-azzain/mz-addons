@@ -14,6 +14,7 @@ Just for Practicin
     'images' : ['images/accounts.jpeg','images/bank_statement.jpeg','images/cash_register.jpeg','images/chart_of_accounts.jpeg','images/customer_invoice.jpeg','images/journal_entries.jpeg'],
     'depends' : ['website'],
     'data': [
+        'views/practice_templates.xml',
     ],
     'demo': [
     ],

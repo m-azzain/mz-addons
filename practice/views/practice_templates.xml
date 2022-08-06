@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    To replace content-->
+    <template id="user_dropdown" inherit_id="portal.user_dropdown">
+        <xpath expr="//li[@t-if='is_connected']" position="replace">
+            <t t-if="website">
+                <h5 class="ms-auto">Has been replaced by Practice</h5>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!--To remove a content just replace its place with empty content -->
+    <!--To remove its effect set active="False" -->
+    <template id="remove_footer_custom" inherit_id="website.footer_custom"  active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+        </xpath>
+    </template>
+
+    <!--I copied this from the website_templates.xml-->
+    <!-- Hide Copyright -->
+    <template id="footer_no_copyright" inherit_id="website.layout" name="Footer No Copyright" active="True">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="before">
+            <t t-set="no_copyright" t-value="True"/>
+        </xpath>
+    </template>
+
+    <!--To Add classes-->
+    <template id="layout" inherit_id="website.navbar"  active="True">
+        <xpath expr="//nav" position="attributes">
+<!--             <attribute name="class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>-->
+             <attribute name="t-attf-class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>
+        </xpath>
+    </template>
+</odoo>
