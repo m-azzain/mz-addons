@@ -36,7 +36,7 @@
     <template id="template_header_default" inherit_id="website.template_header_default"  active="True">
         <xpath expr="//div[@id='top_menu_collapse']" position="attributes">
 <!--             <attribute name="class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>-->
-             <attribute name="class" add="o-fixed-navbar" separator=" "/>
+             <attribute name="class" add="o-absolute-lg" separator=" "/>
         </xpath>
     </template>
 </odoo>

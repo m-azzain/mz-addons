@@ -1,7 +1,12 @@
-.o-fixed-navbar {
-    position: absolute;
-    top:0;
-    background-color: white;
-    width: 400px;
-    z-index: 1;
+
+.o-absolute-lg{}
+
+@include media-breakpoint-down(lg) {
+    .o-absolute-lg {
+        position: absolute;
+        top:$o-absolute-top;
+        background-color: $o-absolute-bg-color;
+        width: $o-absolute-burger-width;
+        z-index: $o-absolute-z-index;
+    }
 }

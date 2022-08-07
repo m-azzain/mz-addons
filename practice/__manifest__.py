@@ -22,6 +22,7 @@ Just for Practicin
     'application': True,
     'assets': {
         'web._assets_primary_variables': [
+            'practice/static/src/scss/primary_variables.scss'
         ],
         'web.assets_backend': [
         ],
