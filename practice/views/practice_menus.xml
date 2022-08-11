@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="practice_menu_root"
+        name="Practice"
+        web_icon="practice,static/description/practice.png"
+        sequence="100">
+
+        <menuitem id="menu_practice_email_demo"
+            action="action_email_demo"
+            sequence="1"/>
+    </menuitem>
+
+</odoo>
+
+

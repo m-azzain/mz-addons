@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name' : 'Practicing',
-    'version' : '1.2',
+    'version' : '1.0',
     'summary': 'Just for Practicing',
     'sequence': 10,
     'description': """
 Practicing
 ====================
-Just for Practicin
+Just for Practicing
 """,
     'category': 'Website/Website',
     'depends' : ['website'],
     'data': [
         'views/practice_templates.xml',
+        'security/ir.model.access.csv',
+        'views/email_demo_views.xml',
+        'views/practice_menus.xml',
     ],
     'icon': 'practice/static/description/practice.png',
     'demo': [

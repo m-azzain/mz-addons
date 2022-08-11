@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_email_demo" model="ir.ui.view">
+        <field name="name">email.demo.form</field>
+        <field name="model">email.demo</field>
+        <field name="arch" type="xml">
+            <form string="Email Demo">
+                    <sheet>
+                        <group name="random_fields">
+                            <field name="partner_id" widget="res_partner_many2one"/>
+                            <field name="random_check_1"/>
+                            <field name="random_check_2"/>
+                        </group>
+                        <group>
+                            <button name="action_send_mail" type="object"
+                            string="Send Email" class="oe_highlight"/>
+                        </group>
+                    </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_email_demo" model="ir.actions.act_window">
+        <field name="name">Email Sending Demo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">email.demo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_email_demo_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_email_demo"/>
+        <field name="act_window_id" ref="action_email_demo"/>
+    </record>
+
+</odoo>
