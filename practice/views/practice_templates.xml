@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <!--    To replace content-->
-    <template id="user_dropdown" inherit_id="portal.user_dropdown">
+    <template id="user_dropdown" inherit_id="portal.user_dropdown" active="False">
         <xpath expr="//li[@t-if='is_connected']" position="replace">
             <t t-if="website">
                 <h5 class="ms-auto">Has been replaced by Practice</h5>
@@ -19,21 +19,21 @@
 
     <!--I copied this from the website_templates.xml-->
     <!-- Hide Copyright -->
-    <template id="footer_no_copyright" inherit_id="website.layout" name="Footer No Copyright" active="True">
+    <template id="footer_no_copyright" inherit_id="website.layout" name="Footer No Copyright" active="False">
         <xpath expr="//div[hasclass('o_footer_copyright')]" position="before">
             <t t-set="no_copyright" t-value="True"/>
         </xpath>
     </template>
 
     <!--To Add classes-->
-    <template id="layout" inherit_id="website.navbar"  active="True">
+    <template id="layout" inherit_id="website.navbar"  active="False">
         <xpath expr="//nav" position="attributes">
 <!--             <attribute name="class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>-->
              <attribute name="t-attf-class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>
         </xpath>
     </template>
 
-    <template id="template_header_default" inherit_id="website.template_header_default"  active="True">
+    <template id="template_header_default" inherit_id="website.template_header_default"  active="False">
         <xpath expr="//div[@id='top_menu_collapse']" position="attributes">
 <!--             <attribute name="class" add="bg-success fs-2 fw-bold fst-italic" separator=" "/>-->
              <attribute name="class" add="o-absolute-lg" separator=" "/>
