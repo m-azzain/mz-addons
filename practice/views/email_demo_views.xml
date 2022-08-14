@@ -3,7 +3,7 @@
 
     <record id="view_email_demo" model="ir.ui.view">
         <field name="name">email.demo.form</field>
-        <field name="model">email.demo</field>
+        <field name="model">practice.email.demo</field>
         <field name="arch" type="xml">
             <form string="Email Demo">
                     <sheet>

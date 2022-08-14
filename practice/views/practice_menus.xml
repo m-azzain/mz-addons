@@ -9,6 +9,26 @@
         <menuitem id="menu_practice_email_demo"
             action="action_email_demo"
             sequence="1"/>
+        <menuitem
+            id="menu_practice_kanban_demo"
+            name="Maintenance"
+            sequence="110">
+            <menuitem
+                id="menu_practice_kanban_demo_teams"
+                name="Maintenance Teams"
+                action="maintenance_team_action"
+                sequence="1"/>
+            <menuitem
+                id="menu_practice_kanban_demo_request"
+                name="Maintenance Requests"
+                action="maintenance_request_action"
+                sequence="2"/>
+            <menuitem
+                id="menu_practice_kanban_demo_stage"
+                name="Maintenance Stages"
+                action="maintenance_stage_action"
+                sequence="3" />
+        </menuitem>
     </menuitem>
 
 </odoo>

@@ -15,7 +15,9 @@ Just for Practicing
         'views/practice_templates.xml',
         'security/ir.model.access.csv',
         'views/email_demo_views.xml',
+        'views/kanban_demo_views.xml',
         'views/practice_menus.xml',
+        'data/kanban_demo_data.xml'
     ],
     'icon': 'practice/static/description/practice.png',
     'demo': [

@@ -3,7 +3,7 @@ from odoo import api, fields, models
 
 
 class EmailDemo(models.Model):
-    _name = 'email.demo'
+    _name = 'practice.email.demo'
     _inherit = ['mail.thread']
     _description = "Email Demo"
 
@@ -29,8 +29,8 @@ class EmailDemo(models.Model):
 
     # To display the fields by partner names in the form
     @api.model
-    def fields_get(self, **kwargs):
-        result = super().fields_get(**kwargs)
+    def fields_get(self, *args, **kwargs):
+        result = super().fields_get(*args, **kwargs)
         for k in self.receivers_selection_map:
             result[k]['string'] = self.receivers_selection_map[k].display_name
         return result
