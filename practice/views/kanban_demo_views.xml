@@ -289,7 +289,7 @@
                 <field string="Team" name="name"/>
                 <filter string="Archived" domain="[('active', '=', False)]" name="inactive"/>
                 <field name="stages"/>
-                <group  expand='0' string='Group by...'>
+                <group string='Group by...'>
                     <filter string='Stages' name="stages" domain="[]" context="{'group_by': 'stages'}"/>
                 </group>
             </search>

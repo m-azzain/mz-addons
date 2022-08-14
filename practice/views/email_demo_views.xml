@@ -29,7 +29,7 @@
     <record id="action_email_demo" model="ir.actions.act_window">
         <field name="name">Email Sending Demo</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">email.demo</field>
+        <field name="res_model">practice.email.demo</field>
         <field name="view_mode">tree,form</field>
     </record>
 
