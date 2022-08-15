@@ -15,7 +15,7 @@ class MaintenanceTeam(models.Model):
     color = fields.Integer("Color Index", default=0)
     request_ids = fields.One2many('practice.maintenance.request', 'maintenance_team_id', copy=False)
 
-    stages = fields.Many2many('practice.maintenance.stage', compute='_compute_team_stages', store=True)
+    stages = fields.Many2many('practice.maintenance.stage', compute='_compute_team_stages', store=True, group_expand='_read_group_stage_ids')
 
     @api.depends('request_ids.stage_id')
     def _compute_team_stages(self):
@@ -24,6 +24,13 @@ class MaintenanceTeam(models.Model):
 
     def write(self, *args, **kwargs):
         return super().write(*args, **kwargs)
+
+    @api.model
+    def _read_group_stage_ids(self, stages, domain, order):
+        """ Read group customization in order to display all the stages in the
+            kanban view, even if they are empty
+        """
+        return stages
 
 
 
