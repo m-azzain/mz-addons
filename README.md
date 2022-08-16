@@ -12,3 +12,4 @@ assuming that you have the common folder as the source_path of your application.
 And if you want to install all of them(or you can select the ones you want) immediately during the first database initialization you can add `-i "base,mail_ext,practice"` to the command above.
  
 
+The addons are matched against [odoo master branch](https://github.com/odoo/odoo/tree/master)
