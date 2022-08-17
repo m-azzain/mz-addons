@@ -4,3 +4,6 @@ access_system_practice_email_demo,email_demo employee,practice.model_practice_em
 access_practice_maintenance_system_user,practice.equipment.request system user,model_practice_maintenance_request,base.group_user,1,1,1,1
 access_practice_maintenance_stage_user,practice.maintenance.stage.user,model_practice_maintenance_stage,base.group_user,1,1,1,1
 access_practice__maintenance_team_user,practice.maintenance.team.user,model_practice_maintenance_team,base.group_user,1,1,1,1
+access_practice_field_tracking_user,practice.field.tracking.user,model_practice_field_tracking,base.group_user,1,1,1,1
+
+

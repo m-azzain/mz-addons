@@ -55,17 +55,17 @@ class MaintenanceRequest(models.Model):
     company_id = fields.Many2one('res.company', string='Company',
         default=lambda self: self.env.company)
     description = fields.Html('Description')
-    request_date = fields.Date('Request Date', tracking=True, default=fields.Date.context_today,
+    request_date = fields.Date('Request Date', default=fields.Date.context_today,
                                help="Date requested for the maintenance to happen")
     owner_user_id = fields.Many2one('res.users', string='Created by User', default=lambda s: s.env.uid)
-    user_id = fields.Many2one('res.users', string='Technician', tracking=True)
-    stage_id = fields.Many2one('practice.maintenance.stage', string='Stage', ondelete='restrict', tracking=True,
+    user_id = fields.Many2one('res.users', string='Technician')
+    stage_id = fields.Many2one('practice.maintenance.stage', string='Stage', ondelete='restrict',
                                group_expand='_read_group_stage_ids', default=_default_stage, copy=False)
     priority = fields.Selection([('0', 'Very Low'), ('1', 'Low'), ('2', 'Normal'), ('3', 'High')], string='Priority')
     color = fields.Integer('Color Index')
     close_date = fields.Date('Close Date', help="Date the maintenance was finished. ")
     kanban_state = fields.Selection([('normal', 'In Progress'), ('blocked', 'Blocked'), ('done', 'Ready for next stage')],
-                                    string='Kanban State', required=True, default='normal', tracking=True)
+                                    string='Kanban State', required=True, default='normal')
     # active = fields.Boolean(default=True, help="Set active to false to hide the maintenance request without deleting it.")
     archive = fields.Boolean(default=False, help="Set archive to true to hide the maintenance request without deleting it.")
     maintenance_type = fields.Selection([('corrective', 'Corrective'), ('preventive', 'Preventive')], string='Maintenance Type', default="corrective")

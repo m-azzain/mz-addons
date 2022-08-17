@@ -12,12 +12,14 @@ Just for Practicing
     'category': 'Website/Website',
     'depends' : ['website'],
     'data': [
+        'data/res_user_data.xml',
         'views/practice_templates.xml',
         'security/ir.model.access.csv',
         'views/email_demo_views.xml',
         'views/kanban_demo_views.xml',
+        'views/field_tracking_demo_views.xml',
         'views/practice_menus.xml',
-        'data/kanban_demo_data.xml'
+        'data/kanban_demo_data.xml',
     ],
     'icon': 'practice/static/description/practice.png',
     'demo': [

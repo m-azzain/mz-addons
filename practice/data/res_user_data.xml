@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record model="res.partner" id="practice.practice_partner_1">
+        <field name="name">Practice partner 1</field>
+
+        <!--By default you only have one company, it is already defined by this external identifier-->
+        <field name="company_id" ref="base.main_company"/>
+        <field name="email">practice.partner1@example.com</field>
+    </record>
+
+    <record id="practice.practice_user_1" model="res.users">
+        <field name="name">Practice user 1</field>
+
+        <!--here no need for an email, login can be any name-->
+        <!--so the user email you use is coming from the partner-->
+        <field name="login">practice.partner1@example.com</field>
+        <field name="password">password</field>
+
+        <!--Here is the connection between user and partner; the user inherit from the partner-->
+        <field name="partner_id" ref="practice.practice_partner_1"/>
+
+        <!-- You can assign the user specific groups -->
+        <!-- not sure if this syntax available in your version or not, so I commented it out -->
+        <!-- by default the user will be assigned to the group 'base.group_user', means he is an employee by default -->
+        <!-- <field name="groups_id" eval="[Command.set([ref('base.group_user')])]"/> -->
+    </record>
+</odoo>

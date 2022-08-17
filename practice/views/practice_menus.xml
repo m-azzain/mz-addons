@@ -29,6 +29,11 @@
                 action="maintenance_stage_action"
                 sequence="3" />
         </menuitem>
+        <menuitem
+            id="menu_field_tracking_demo_action"
+            name="Field Tracks"
+            action="field_tracking_demo_action"
+            sequence="4" />
     </menuitem>
 
 </odoo>
