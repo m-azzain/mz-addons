@@ -20,7 +20,7 @@ class EmailDemo(models.Model):
         return {'res_partner_1': self.env.ref('base.res_partner_1'),
                'res_partner_2': self.env.ref('base.res_partner_2'),
                'res_partner_3': self.env.ref('base.res_partner_3'),
-               'res_partner_4': self.env.ref('base.res_partner_4')}
+               'res_partner_4': self.env.ref('practice.practice_partner_1')}
 
     def action_send_mail(self):
         selected_partners = [p.id for k, p in self.receivers_selection_map.items() if self[k]]
