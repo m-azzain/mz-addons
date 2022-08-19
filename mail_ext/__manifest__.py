@@ -31,8 +31,17 @@ Just to practice what can be customized in emil addon
         ],
         'web.assets_qweb': [
         ],
-        'mail.assets_messaging': [
-            'mail_ext/static/src/models/composer_view.js',
+        # if you are using master branch uncomment this part and comment the next one
+        # 'mail.assets_messaging': [
+        #     'mail_ext/static/src/models/composer_view.js',
+        # ],
+
+        # if your are using 15.0 branch use this and comment the above
+        'mail.assets_discuss_public': [ # front end bundle
+            'mail_ext/static/src/models/composer_view_15.js',
+        ],
+        'web.assets_backend': [ # banck end bundle
+            'mail_ext/static/src/models/composer_view_15.js',
         ],
     },
     'license': 'LGPL-3',

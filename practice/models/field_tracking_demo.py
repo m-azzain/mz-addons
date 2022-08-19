@@ -1,4 +1,4 @@
-from odoo import api, fields, models, SUPERUSER_ID
+from odoo import fields, models
 
 
 class FieldTracking(models.Model):
